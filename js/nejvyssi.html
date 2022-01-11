@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title></title>
+</head>
+
+<body>
+<script>
+const numbers=[];
+for(let i = 0; i < 10; i++){
+    var kolikate=+i-(-1);
+    numbers[i] =parseFloat(window.prompt("Zadejte číslo "+kolikate));}
+var nejvyssi=0;
+window.prompt(numbers);
+for (let number in numbers){
+    if (numbers[number]>nejvyssi){nejvyssi=numbers[number];}
+    };
+document.write("nejvyšší číslo je " + nejvyssi);
+</script>
+</body>
+</html>

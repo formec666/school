@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<head>
+	<title></title>
+	<meta name="generator" content="CSE HTML Validator Professional (http://www.htmlvalidator.com/)" />
+	
+
+</head>
+<body>
+	
+		<form style="border: 2px;background-color: aqua; ">
+			<input type="text" id="a">
+			<input type="text" id="b">
+			<input type="text" id="c"><br>
+			<textarea  id="nevim" cols="30" rows="10"></textarea>	
+		</form>
+		<button onclick="lol()" >lol</button>
+		<button onclick="lmao()">lmao</button>
+
+
+		<div id="dunno"></div>
+
+
+<script>
+	function lol(){
+		var a=Number(document.getElementById("a").value);
+		var b=Number(document.getElementById("b").value);
+		var c=Number(document.getElementById("c").value);
+		var max=a;
+		var array=[a,b,c];
+		array.sort();
+		if(a>b&&a>c){
+			max=a;
+		}
+		else if (b>c) {
+			max=b;
+		}
+		else{max=c}
+
+		
+		document.getElementById("dunno").innerHTML="Vysledek je " + max;
+		
+	}
+
+	function lmao(){
+		var a=Number(document.getElementById("a").value);
+		var b=Number(document.getElementById("b").value);
+		var c=Number(document.getElementById("c").value);
+		var max;
+		if (a>b) {
+			if (a>c) {max=a;}
+			
+			else{max=c;}	
+		}
+		else{if (b>c) {max=b;}
+
+			else {max=c;}
+			}
+		
+		document.getElementById("nevim").innerText=max;
+
+}
+</script>
+</body>

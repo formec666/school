@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<head>
+	<title></title>
+	<meta name="generator" content="CSE HTML Validator Professional (http://www.htmlvalidator.com/)" />
+	
+
+</head>
+<body>
+    <script>
+        var pocetPrvku=10;
+        var max=parseInt(window.prompt("zadejte 1. číslo "));
+        for(var i =0; i<(pocetPrvku-1); i++){
+            var now=parseInt(window.prompt("zadejte " +Number( Number(i)+ Number(2)) + " číslo "));
+            if(max<now){
+                max=now;
+            }
+
+        }
+        document.write("vysledek je "+max);
+    </script> 
+
+</body>
