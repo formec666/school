@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+ <title>JS 2, úkol 1</title>
+</head>
+<body>
+    <div class="div">
+        <textarea name="textarea" id="textarea" cols="30" rows="1"></textarea>
+        <button onclick="print()" id="btn">Odeslat!</button>
+    </div>
+    <script>
+        function print(){
+            var text = document.getElementById("textarea").value;
+            document.write(text);
+        }
+
+        function find(){
+            var a = parseInt(document.getElementById("first").value);
+            var b = parseInt(document.getElementById("second").value);
+
+            var c= a.valueOf()+b.valueOf();
+            if(c>0){
+                window.alert("je kladné");
+            }
+            else{window.alert("není kladné");}
+        }
+    </script>
+    <div>
+        <textarea name="" id="first" cols="30" rows="1"></textarea>
+        <textarea name="" id="second" cols="30" rows="1"></textarea>
+        <button onclick="find()">zjisti</button>
+    </div>
+    
+</body>
+
+</html>
