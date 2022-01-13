@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+ <title>JS 2, úkol 1</title>
+</head>
+<body>
+
+    <H1>Výpočet indexu BMI</H1>
+<form>
+    zadejte jméno a příjmení: <input type="text" name="name" id="name" pattern="[A-Za-z].{1, }">
+    zadejte vaši váhu v kilogramech: <input type="number" name="mass" id="mass">
+    zadejte vyši výšku v centimetrech: <input type="number" name="height" id="height">
+    <input type="submit" value="Zjistit BMI" onsubmit="calculate()">
+</form>
+
+<script>
+    function calculate(){
+        var name=document.getElementById("name").value;
+        var mass=Number(document.getElementById("mass").value);
+        var height=Number(document.getElementById("height").value);
+
+
+
+    }
+
+    function validate(){
+
+
+    }
+</script>
+
+</body>
