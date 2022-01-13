@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <!---<link rel="stylesheet" href="style.css">-->
+ <title>JS 5, úkol 1</title>
+</head>
+<body>
+    <script>
+        var text=window.prompt("zadejte text");
+        const pattern=/[ABCDEFGHIJKLMNOPQRSTUVWXZY]/;
+        
+        window.alert("velké písmeno je v textu na "+(text.search(pattern).valueOf()+1)+". místě");
+    </script>
+</body>
