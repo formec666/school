@@ -3,30 +3,56 @@
 <head>
  <meta charset="utf-8">
  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <title>JS 2, úkol 1</title>
 </head>
 <body>
-
     <H1>Výpočet indexu BMI</H1>
-<form>
-    zadejte jméno a příjmení: <input type="text" name="name" id="name" pattern="[A-Za-z].{1, }">
-    zadejte vaši váhu v kilogramech: <input type="number" name="mass" id="mass">
-    zadejte vyši výšku v centimetrech: <input type="number" name="height" id="height">
-    <input type="submit" value="Zjistit BMI" onsubmit="calculate()">
+<form class="w3-container">
+    <p>
+    <label>zadejte jméno a příjmení: </label>
+    <input class="w3-input" type="text" name="name" id="name">
+    <p>
+    <label>zadejte vaši váhu v kilogramech:</label>
+    <input class="w3-input" type="number" name="mass" id="mass">
+    <p>
+    <label >zadejte vyši výšku v centimetrech: </label>
+    <input class="w3-input" type="number" name="height" id="height">
+    <p class="withButton">
+    <input class="w3-button w3-blue" type="button" value="Zjistit BMI" onclick="calculate()">
 </form>
+<div class="resultText" id="output"></div>
 
 <script>
     function calculate(){
         var name=document.getElementById("name").value;
         var mass=Number(document.getElementById("mass").value);
         var height=Number(document.getElementById("height").value);
+        var initials=validate(name, mass, height);
+        if (initials!=null){
+            document.getElementById("output").innerHTML="Hodnota BMI pro "+initials+" je "+getBMI(mass.valueOf(), height.valueOf()).toFixed(1);
+        }
+    }
 
-
+    function getBMI(mass, height){
+        return (mass/Math.pow(height, 2));
 
     }
 
-    function validate(){
+    function validate( name, mass, height){
+        var nameForbidden=/[^a-zA-Z\-]+$/;
 
+        if(nameForbidden.test(name)|name ==0){
+            window.alert("jméno musí obsahovat pouze znaky abecedy, a musí být vyplněno");
+            
+        }
+        else if( +mass<=0 | +height<=0){
+            window.alert("zadejte platné údaje");
+        }
+        else{
+            return name.replace(/[^A-ZČĚŠŘŽÝÁÍÉ]+/g, "");
+        }
+        
 
     }
 </script>
